@@ -101,7 +101,7 @@ app.post('/coords', function(request, response) {
 
 	// Create markers/pin for each user on the map
 	people.forEach(function(entry) {
-	    markerParam += "&markers=color%3A" + entry.color + "%7Clabel%3A" + entry.label + "%7Cshadow%3Atrue%7C" + entry.latlng
+	    markerParam += "&markers=color%3A" + entry.color + "%7Clabel%3A" + entry.label + "%7Cshadow%3Atrue%7C" + latlng //entry.latlng
 	});
 
 	// Construct the message to send to Slack using Incoming Webhooks Attachment format
@@ -110,7 +110,7 @@ app.post('/coords', function(request, response) {
 			{
 				"fallback": "Required plain-text summary of the attachment.",
 				"color": "#36a64f",
-				"pretext": "https://maps.googleapis.com/maps/api/staticmap?" +
+				"pretext": latlng + "https://maps.googleapis.com/maps/api/staticmap?" +
 							 "size=" + mapsize +
 				             "&key=" + gmaps_api_key +
 							 "&maptype=" + maptype +
