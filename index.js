@@ -110,14 +110,10 @@ app.post('/coords', function(request, response) {
 	var attachment = {
 		"attachments": [
 			{
-				"fallback": "Required plain-text summary of the attachment.",
+				"fallback": "Ubicación enviada",
 				"color": "#36a64f",
-				"pretext": latlng + "https://maps.googleapis.com/maps/api/staticmap?" +
-							 "size=" + mapsize +
-				             "&key=" + gmaps_api_key +
-							 "&maptype=" + maptype +
-							 markerParam,
-				"title": person.label + "'s location",
+				"pretext": "Aqui la ubicacón aproximada",
+				"title": "Ubicacion del operador",
 				"title_link": "https://www.google.com/maps/place/" + latlng,
 				"image_url": "https://maps.googleapis.com/maps/api/staticmap?" +
 							 "size=" + mapsize +
