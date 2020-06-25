@@ -9,6 +9,7 @@ config.host_app.mapsize = "500x400";
 config.host_app.maptype = "roadmap";
 config.host_app.label = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 config.host_app.color = ["red","green","blue","orange","yellow","purple","gray","brown","black","white"];
+config.host_app.gmaps_api_key = process.env.GMAPS_API_KEY; //
 
 config.slack = {};
 config.slack.incoming_webhook_endpoint = process.env.SLACK_INCOMING_WEBHOOK_URL;

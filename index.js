@@ -25,6 +25,7 @@ var mapsize = config.host_app.mapsize;
 var maptype = config.host_app.maptype;
 var label = config.host_app.label;
 var color  = config.host_app.color;
+var gmaps_api_key  = config.host_app.gmaps_api_key;
 
 app.get('/', function(request, response) {
   response.render('pages/index')
@@ -114,12 +115,13 @@ app.post('/coords', function(request, response) {
 				"title_link": "https://www.google.com/maps/place/" + latlng,
 				"image_url": "https://maps.googleapis.com/maps/api/staticmap?" +
 							 "size=" + mapsize +
+				             "&key=" + gmaps_api_key +
 							 "&maptype=" + maptype +
 							 markerParam,
 				//"thumb_url": "http://example.com/path/to/thumb.png"
 				 "fields":[
 					{
-					   "title": "Update your own location",
+					   "title": "Actualiza tu ubicacion",
 					   "value": host_app_url + "",
 					   "short":false
 					}
