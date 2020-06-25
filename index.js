@@ -36,7 +36,7 @@ app.get('/findme', function(request, response) {
 
 // When bot is called, reply with link to the app
 app.post('/slack', function(request, response) {
-	response.send({"challenge":"I9wBHadYjrmRnouVuoOZ2pU1p1L0JlcAQYxWli4Z0k75gYSUEm9z",  "text": "Click me -> " + host_app_url });
+	response.send({"challenge":"I9wBHadYjrmRnouVuoOZ2pU1p1L0JlcAQYxWli4Z0k75gYSUEm9z", "text": "Click me -> " + host_app_url });
 });
 
 var people = [];
