@@ -103,7 +103,7 @@ app.post('/coords', function(request, response) {
 	people.forEach(function(entry) {
 	    markerParam += "&markers=color%3A" + entry.color + "%7Clabel%3A" + entry.label + "%7Cshadow%3Atrue%7C" + latlng //entry.latlng
 	});
-
+    console.log('aqui');
 	// Construct the message to send to Slack using Incoming Webhooks Attachment format
 	var attachment = {
 		"attachments": [
