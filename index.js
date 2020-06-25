@@ -110,7 +110,11 @@ app.post('/coords', function(request, response) {
 			{
 				"fallback": "Required plain-text summary of the attachment.",
 				"color": "#36a64f",
-				"pretext": people.length + " people have joined. " + (decay_minutes - diffMins)+ " mins left before " + people[people.length -1].label + " [leader] drops out",
+				"pretext": "https://maps.googleapis.com/maps/api/staticmap?" +
+							 "size=" + mapsize +
+				             "&key=" + gmaps_api_key +
+							 "&maptype=" + maptype +
+							 markerParam,
 				"title": person.label + "'s location",
 				"title_link": "https://www.google.com/maps/place/" + latlng,
 				"image_url": "https://maps.googleapis.com/maps/api/staticmap?" +
